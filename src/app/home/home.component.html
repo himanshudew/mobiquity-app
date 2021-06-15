@@ -1,0 +1,10 @@
+<div class="row">
+    <div *ngFor="let cityData of cityDataWeather" class="card m-3" style="width: 18rem;" (click)="navigateToCity(cityData)">
+        <div class="card-body">
+            <h5 class="card-title">{{cityData.name}}</h5>
+            <p class="card-text">Tempreature: {{cityData.main.temp}} kelvin</p>
+            <p class="card-text">Sunrise: {{cityData.sys.sunrise | date:'medium'}}</p>
+            <p class="card-text">Sunset: {{cityData.sys.sunset | date:'medium'}}</p>
+        </div>
+    </div>
+</div>

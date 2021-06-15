@@ -1,0 +1,14 @@
+<div class="card m-3">
+    <div class="card-body bg-secondary">
+        <h5 class="card-title">{{cityName}}</h5>
+        <div class="row">
+            <div *ngFor="let cityData of filteredCityData" class="card m-1" (click)="navigateToCity(cityData)">
+                <div class="card-body bg-ligth">
+                    <p>{{cityData.dt_txt | date:'medium'}}</p>
+                    <p>Sea level: {{cityData.main.sea_level}} hPa</p>
+                    <p>Tempreature: {{cityData.main.temp}} kelvin</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
